@@ -16,9 +16,10 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "publish:np": "np  --no-yarn",
+    "generate-barrels": "barrelsby --delete -d src -l all"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.0.1",
     "husky": "^8.0.1",
+    "np": "^7.6.2",
     "size-limit": "^8.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
