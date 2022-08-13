@@ -103,10 +103,10 @@ describe('days()', () => {
     expect(days(1).toSeconds()).toBe(60 * 60 * 24);
   });
   it('converts days to minutes correctly', () => {
-    expect(days(1).toMinutes()).toBe(60 * 60 * 24);
+    expect(days(1).toMinutes()).toBe(60 * 24);
   });
   it('converts days to hours correctly', () => {
-    expect(days(1).toHours()).toBe(60 * 60 * 24);
+    expect(days(1).toHours()).toBe(24);
   });
   it('converts days to days correctly', () => {
     expect(days(1).toDays()).toBe(1);
@@ -130,10 +130,10 @@ describe('weeks()', () => {
     expect(weeks(1).toSeconds()).toBe(60 * 60 * 24 * 7);
   });
   it('converts weeks to minutes correctly', () => {
-    expect(weeks(1).toMinutes()).toBe(60 * 60 * 24 * 7);
+    expect(weeks(1).toMinutes()).toBe(60 * 24 * 7);
   });
   it('converts weeks to hours correctly', () => {
-    expect(weeks(1).toHours()).toBe(60 * 60 * 24 * 7);
+    expect(weeks(1).toHours()).toBe(24 * 7);
   });
   it('converts weeks to days correctly', () => {
     expect(weeks(1).toDays()).toBe(7);
@@ -157,10 +157,10 @@ describe('months()', () => {
     expect(months(1).toSeconds()).toBe(60 * 60 * 24 * 30);
   });
   it('converts months to minutes correctly', () => {
-    expect(months(1).toMinutes()).toBe(60 * 60 * 24 * 30);
+    expect(months(1).toMinutes()).toBe(60 * 24 * 30);
   });
   it('converts months to hours correctly', () => {
-    expect(months(1).toHours()).toBe(60 * 60 * 24 * 30);
+    expect(months(1).toHours()).toBe(24 * 30);
   });
   it('converts months to days correctly', () => {
     expect(months(1).toDays()).toBe(30);
@@ -184,10 +184,10 @@ describe('years()', () => {
     expect(years(1).toSeconds()).toBe(60 * 60 * 24 * 365);
   });
   it('converts years to minutes correctly', () => {
-    expect(years(1).toMinutes()).toBe(60 * 60 * 24 * 365);
+    expect(years(1).toMinutes()).toBe(60 * 24 * 365);
   });
   it('converts years to hours correctly', () => {
-    expect(years(1).toHours()).toBe(60 * 60 * 24 * 365);
+    expect(years(1).toHours()).toBe(24 * 365);
   });
   it('converts years to days correctly', () => {
     expect(years(1).toDays()).toBe(365);
