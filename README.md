@@ -65,3 +65,27 @@ The object returned by all time converters. It contains methods to convert to an
 
 - [@mark-wilkins](https://github.com/mwilkins91)
 
+
+## Usage/Examples
+
+### Convert seconds to miliseconds for setTimeout()
+
+```typescript
+import { seconds } from '@wilkins-software/time-conversion-helpers'
+
+setTimeout(() => {
+    console.log('this will fire after 4 seconds');
+}, seconds(4).toMilliseconds())
+
+```
+
+### Convert days to seconds for a cache control header
+
+```typescript
+import { days } from '@wilkins-software/time-conversion-helpers'
+
+const headers = {
+    'Cache-Control': `max-age=${days(30).toSeconds()}`
+}
+
+```
