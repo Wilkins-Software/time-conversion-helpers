@@ -1,52 +1,67 @@
-[![CI](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml)
-[![size](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml)
 
-<div style="display: flex;">
-  <img src="https://img.shields.io/github/issues/Wilkins-Software/time-conversion-helpers" />
-  <img src="https://img.shields.io/github/forks/Wilkins-Software/time-conversion-helpers" />
-  <img src="https://img.shields.io/github/stars/Wilkins-Software/time-conversion-helpers" />
-  <img src="https://img.shields.io/github/license/Wilkins-Software/time-conversion-helpers" />
-</div>
+# Time Conversion Helpers
 
-### Bundle Analysis
-
-[`size-limit`](https://github.com/ai/size-limit) is set up to calculate the real cost of your library with `npm run size` and visualize the bundle with `npm run analyze`.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [`size-limit`](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
+A small library of helpers that convert one unit of time to another (roughly). For instance...
+```ts
+    import { seconds } from '@wilkins-software/time-conversion-helpers';
+    
+    const numberOfSeconds = minutes(2).toSeconds(); // 120
 ```
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
 
-## Module Formats
+## Badges
 
-CJS, ESModules, and UMD module formats are supported.
+[![CI](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml)
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+[![size](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml)
 
-## Named Exports
+![issues](https://img.shields.io/github/issues/Wilkins-Software/time-conversion-helpers)
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+![size](https://img.shields.io/github/forks/Wilkins-Software/time-conversion-helpers)
 
-## Publishing to NPM
+![size](https://img.shields.io/github/stars/Wilkins-Software/time-conversion-helpers)
 
-We recommend using [np](https://github.com/sindresorhus/np).
+![size](https://img.shields.io/github/license/Wilkins-Software/time-conversion-helpers)
+
+
+
+
+## API Reference
+
+#### Exported Functions
+
+```
+  functions: Accepted time units
+```
+
+| function  | argument          | Returns                |
+| :-------- | :-------          | :----------------------|
+| `seconds` | `numberOfSeconds` | ConverterObject        |
+| `minutes` | `numberOfMinutes` | ConverterObject        |
+| `hours`   | `numberOfHours`   | ConverterObject        |
+| `days`    | `numberOfDays`    | ConverterObject        |
+| `weeks`   | `numberOfWeeks`   | ConverterObject        |
+| `months`  | `numberOfMonths`  | ConverterObject        |
+| `years`   | `numberOfYears`   | ConverterObject        |
+
+#### ConverterObject
+
+The object returned by all time converters. It contains methods to convert to any other time unit:
+
+| Method             | Returns    
+| :--------          | :------- | 
+| `toMilliseconds()` | `number` | 
+| `toSeconds()`      | `number` | 
+| `toMinutes()`      | `number` |
+| `toHours()`        | `number` | 
+| `toDays()`         | `number` | 
+| `toWeeks()`        | `number` | 
+| `toMonths()`       | `number` | 
+| `toYears()`        | `number` | 
+
+
+
+## Authors
+
+- [@mark-wilkins](https://github.com/mwilkins91)
+
