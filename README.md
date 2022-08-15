@@ -11,6 +11,8 @@ A small library of helpers that convert one unit of time to another (roughly). F
 
 ## Badges
 
+[![npm version](https://badge.fury.io/js/@wilkins-software%2Ftime-conversion-helpers.svg)](https://badge.fury.io/js/@wilkins-software%2Ftime-conversion-helpers)
+
 [![CI](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/main.yml)
 
 [![size](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml/badge.svg)](https://github.com/Wilkins-Software/time-conversion-helpers/actions/workflows/size.yml)
