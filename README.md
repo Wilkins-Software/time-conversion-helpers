@@ -3,7 +3,7 @@
 
 A small library of helpers that convert one unit of time to another (roughly). For instance...
 ```ts
-    import { seconds } from '@wilkins-software/time-conversion-helpers';
+    import { minutes } from '@wilkins-software/time-conversion-helpers';
     
     const numberOfSeconds = minutes(2).toSeconds(); // 120
 ```
